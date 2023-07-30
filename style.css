@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+    --font-normal: 300;
+    --font-bold: 500;
+    --font-extra-bold: 700;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: start;
+    background-image: url(/images/pattern-curve.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+  
+
+
+main .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    gap: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.card-img {
+    background-image: url(/images/pattern-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.85rem 2.25rem 2rem;
+    min-height: 20rem;
+    position: relative;
+    
+}
+
+.main-img {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    
+}
+
+
+.card-img .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 87%;
+}
+
+
+.card-img .btn-group button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-img .btn-group button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-img .btn-group button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-image: url(/images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 2rem;
+    background-size: 70px 70px;
+    padding-bottom: 2rem;
+}
+
+.card-content p {
+    text-align: center;
+    font-weight: var(--font-normal);
+    line-height: 1.4;
+}
+
+.card-content .quote {
+    width: 350px;
+}
+
+.card-content .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+}
+
+.card-content .card-info p {
+    font-weight: var(--font-extra-bold);
+    color: var(--grayish-blue);
+}
+
+
+@media all and (min-width: 1100px)
+{
+    main {
+        margin-top: 7rem;
+    }
+   
+    main .slide {
+        flex-direction: row-reverse;
+        align-items: stretch;
+    }
+
+    main .card-img {
+        width: 500px;
+    }
+
+    main .card-content .quote {
+        font-size: 1.9rem;
+        width: 500px;
+        text-align: left;
+    }
+
+
+    main .card-content .card-info {
+        flex-direction: row;
+        gap: 1rem;
+        align-self: flex-start;
+        align-items: flex-start;
+    }
+
+    main .card-content .card-info p {
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+
+    main .card-content {
+        background-size: 120px 150px;
+        background-position: 50px 0px;
+    }
+
+    .card-img .btn-group {
+        left: 30%;
+    }
+
+}
