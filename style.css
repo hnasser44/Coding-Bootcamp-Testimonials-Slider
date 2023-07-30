@@ -10,6 +10,13 @@ img {
     max-width: 100%;
 }
 
+.screen-reader-text {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 
 :root {
     --dark-blue: hsl(240, 38%, 20%);
